@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <link rel="icon" href="logo.png">
+    <title>
+        
+      brandx 
+
+    </title>
+    <style>
+        body{
+            /* background-image: url("img1.jpg"); */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        fieldset{
+            margin-left: 30%;
+            margin-right: 30%;
+            margin-top: 25px;
+            border: 5px solid #555;
+            background-color: #eeeeee;
+        }
+        legend{
+            font-size: 25px;
+        }
+        input[type=submit]{
+            margin-left: 30%;
+            background-color: black;
+            color: skyblue;
+            width: 100px;
+            height: 35px;
+        }
+        input[type=text]{
+            border: 2px solid rgb(141, 137, 137);
+            padding-left: 10px;
+            margin: 10px 2px 10px;
+        }
+        #ad{
+            width: 80%;
+            /* margin-left: 30%; */
+            /* margin-right: 30%; */
+            margin-top: 25px;
+            /* height: 75px; */
+            padding-bottom:10%;
+        }
+    </style>
+
+    </head>
+    <body>
+        <img src="logo.png" alt="logo image" style="width:50px; height:50px">
+        <br>
+        <img src="banner.jpg" alt="banner image" style="width:100%; height:280px">
+        
+        
+        
+        <p style="font-size:xx-large ; text-align: center;">Get Yourself Registered:</p>
+        <br>
+        <form >
+            <fieldset>
+                <legend>Personal Information:</legend>
+            First Name:<br>
+            <input type="text" name="firstname"><br>
+            Middle Name:<br>  
+            <input type="text" name="Middlename"><br>
+            Last Name:<br>
+            <input type="text" name="lastname"><br>
+            Email:<br>
+            <input type="text" name="email"><br>
+            Phone Number:<br>
+            <input type="text" name="phonenumber"><br>
+            
+            D.O.B:<br>
+            <input type="text" name="dob"><br>
+            Gender:<br>
+            <form>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other
+              </form>
+            </fieldset>
+            <fieldset>
+                <legend> Create Password: </legend>
+                Password:<br>
+            <input type="text" name="Password"><br>
+            </fieldset>
+            
+            <fieldset >
+                <legend>Address Details:</legend>
+            
+            Current Address:<br>
+            <input id="ad" type="textarea" name="caddress"><br>
+            <br>
+            Permanent Address:<br>
+            <input id="ad" type="textarea" name="paddress ""><br>
+            <br>
+            City:<br>
+            <input type="text" name="City"><br>
+            State:<br>
+            <input type="text" name="State"><br>
+            Country:<br>
+            <input type="text" name="country"><br>
+            Zip:<br>
+            <input type="text" name="zip"><br>
+
+            </fieldset>
+            
+          <fieldset>
+              <legend>Personal Interest:</legend>
+            <input type="checkbox" name="interest" value="sports" checked> Sports<br>
+            <input type="checkbox" name="interest" value="book"> Book<br>
+            <input type="checkbox" name="interest" value="computer"> Computer and software<br>
+            <input type="checkbox" name="interest" value="Photography"> Photography<br>
+            <input type="checkbox" name="interest" value="Fashion"> Fashion<br>
+
+            <input type="checkbox" name="gender" value="other"> Other
+          </fieldset>
+          <br>
+          <input type="submit" value="Submit">          
+
+          </form>
+    </body>
+</html>

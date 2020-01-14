@@ -35,7 +35,7 @@
             padding-left: 10px;
             margin: 10px 2px 10px;
         }
-        #ad{
+        .address{
             width: 80%;
             /* margin-left: 30%; */
             /* margin-right: 30%; */
@@ -59,48 +59,52 @@
             <fieldset>
                 <legend>Personal Information:</legend>
             First Name:<br>
-            <input type="text" name="firstname"><br>
+            <input type="text" name="firstname" placeholder="Abhishek"><br>
             Middle Name:<br>  
-            <input type="text" name="Middlename"><br>
+            <input type="text" name="Middlename" placeholder="Pratap"><br>
             Last Name:<br>
-            <input type="text" name="lastname"><br>
+            <input type="text" name="lastname" placeholder="Singh"><br>
             Email:<br>
-            <input type="text" name="email"><br>
+            <input type="text" name="email" placeholder="abc@xyz.com"><br>
             Phone Number:<br>
-            <input type="text" name="phonenumber"><br>
+            <input type="text" name="phonenumber" placeholder="9876543210"><br>
             
+            <div style="padding-bottom:10px;">
             D.O.B:<br>
-            <input type="text" name="dob"><br>
+            <input type="date" name="dob" style="margin-top: 10px;"><br>
+            </div>
             Gender:<br>
-            <form>
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female"> Female<br>
-                <input type="radio" name="gender" value="other"> Other
-              </form>
+            <div style="padding-top: 10px;">
+           
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other
+            </div>
+        
             </fieldset>
             <fieldset>
                 <legend> Create Password: </legend>
                 Password:<br>
-            <input type="text" name="Password"><br>
+            <input type="text" name="Password" placeholder="*********"><br>
             </fieldset>
             
             <fieldset >
                 <legend>Address Details:</legend>
             
             Current Address:<br>
-            <input id="ad" type="textarea" name="caddress"><br>
+            <input class="address" type="text" name="caddress" placeholder="Address goes here..."><br>
             <br>
             Permanent Address:<br>
-            <input id="ad" type="textarea" name="paddress ""><br>
+            <input class="address" type="text" name="paddress " placeholder="Address goes here..."><br>
             <br>
             City:<br>
-            <input type="text" name="City"><br>
+            <input type="text" name="City" placeholder="Jamshedpur"><br>
             State:<br>
-            <input type="text" name="State"><br>
+            <input type="text" name="State" placeholder="Jharkhand"><br>
             Country:<br>
-            <input type="text" name="country"><br>
+            <input type="text" name="country" placeholder="India"><br>
             Zip:<br>
-            <input type="text" name="zip"><br>
+            <input type="number" name="zip" placeholder="831005" style="padding-left:10px"><br>
 
             </fieldset>
             

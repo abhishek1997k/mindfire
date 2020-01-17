@@ -1,0 +1,98 @@
+#formid{
+    opacity: 75%;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-style:solid;
+    border-color: black ;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right:55%;
+    padding-left: 30px;
+    border-radius: 10px;
+    background-color: rgb(233, 233, 231);
+    margin-bottom: 5%;
+}
+input{
+    /* margin: 10px; */
+    padding-left: 10px;
+    /* margin-left: 100px; */
+    height: 30px;
+    width: 80%;
+}
+
+label{
+    margin:5px;
+
+}
+
+input[ type=submit ]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 200%;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(28, 240, 28);
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: large;
+    margin-left: 10px;
+
+
+}
+#address{
+    padding-bottom: 30px;
+    padding-top: 10px;
+    width: 80%;
+    height: 60px;
+}
+body{
+    background-image: url("img2.jpg");
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+}
+
+#displayMessage1{
+    padding-top: 10px;
+    color: black;
+
+}
+#displayMessage2{
+    padding-top: 10px;
+    color: black;
+}
+#displayMessage3{
+    /* padding-top: 10px; */
+    color: black;
+}
+
+.captchaButton{
+
+    width: 25%;
+    padding:3px;
+    background-color: gold;
+}
+
+#captchaResponse{
+    width: 70%;
+
+}
+#registrationButton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 200%;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(28, 240, 28);
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: large;
+    /* margin-left: 33%; */
+    
+
+}
+
+p{
+    color: red;
+}

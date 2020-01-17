@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registeration</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    
+
+    
+</head>
+<body onload="captchaDriver()">
+
+    
+    <form id="formid" name="myform">
+
+        <label style="font-size: xx-large ;">CREATE A NEW ACCOUNT:</label></br>
+
+        <label for="name">NAME:</label><br>
+        <input type="text"  id="name" name="name" placeholder=" Abhishek Kumar" ><br>
+        <p id="nameError"></p>
+
+        <label for="contact">CONTACT:</label><br>
+        <input type="number" id="contact" name="contact" placeholder="8XXXXXXXX6"><br>
+        <p id="contactError"></p>
+
+        <label for="email">E-MAIL:</label><br>
+        <input type="text" id="email" name="email" placeholder="xyz@gmail.com"><br>
+        <p id="emailError"></p>
+
+        <label for="gender">GENDER:</label><br>
+        <select id="gender" style="margin: 2px;">
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select><br>
+
+        <label for="dob">D.O.B:</label><br>
+        <input type="date" name="dob"><br>
+        <p id="dateError"></p>
+
+        <label for="address">ADDRESS:</label><br>
+        <input id="address" type="text" name="address" placeholder="Address goes here..." ><br>
+        <p id="addressError"></p>
+
+        <fieldset style="border: solid; margin-top: 10px; margin-right: 20px; padding: 10px;">
+          <legend style="text-align: center; font-size: medium;"> Verify Captcha:</legend>
+
+          <p id="displayMessage1"></p>
+          <p id="displayMessage2"></p>
+       
+        
+          <div id="captcha">
+            <input type="number" Id="captchaResponse" name="response" >
+            <input type="button" class="captchaButton" value="Submit" onclick="captchaEvaluation() ">
+          </div>
+        
+        
+          <div style="width: 100%;  margin-left: 30%;">
+            <input type="button" class="captchaButton" value="Refresh Captcha" onclick="captchaDriver()" style="margin-top: 10px; width: 35%;">
+          </div>
+        
+        
+          <div id="displayMessage3" style="text-align: center;padding-top: 10px;"></div>
+
+        </fieldset>
+
+      <input type="button" value="REGISTER" id="registrationButton" onclick="validFunction()" style="display: none;">
+    
+        
+
+     </form>
+    <script src="captchaValidation.js"></script>
+    <script src="formValidation.js"></script>
+
+</body>
+</html>

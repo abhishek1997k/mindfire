@@ -134,34 +134,64 @@ function validFunction()
 
     }
 
-     // Evaluating contact input
+    // Evaluating contact input
+
+
+    var numbers = /^[0-9]+$/;
     
 
-    var contact_var=document.getElementById("numberContact").value;
-    var alterContact_var=document.getElementById("numberAlternativeContact").value;
+    var contact_var=document.getElementById("txtContact").value;
+    var alterContact_var=document.getElementById("txtAlternativeContact").value;
 
-    document.getElementById("numberContactError").textContent="";
-    document.getElementById("numberAlternativeContactError").textContent="";
-    if(alterContact_var!=""){
-    if(alterContact_var>9999999999 || alterContact_var<600000000)
+    document.getElementById("txtContactError").textContent="";
+    document.getElementById("txtAlternativeContactError").textContent="";
+    if(alterContact_var!="")
     {
-        document.getElementById("numberAlternativeContactError").textContent="The field is empty or wrong number is entered";
-        document.getElementById("numberAlternativeContact").focus();
+    
+        if(numbers.test(alterContact_var))
+        {
+            if(alterContact_var>9999999999 || alterContact_var<600000000)
+            {
+                document.getElementById("txtAlternativeContactError").textContent="The field is empty or wrong number is entered";
+                document.getElementById("txtAlternativeContact").focus();
         
-        state=false;
+                state=false;
         
-    }
+            }
+
+        }
+        if(!numbers.test(alterContact_var))
+        {
+            document.getElementById("txtAlternativeContactError").textContent="The field is empty or wrong number is entered";
+            document.getElementById("txtAlternativeContact").focus();
+        
+            state=false;
+
+        }
     }
 
+    if(!numbers.test(contact_var))
+    {
+        document.getElementById("txtContactError").textContent="The field is empty or wrong number is entered";
+        document.getElementById("txtContact").focus();
+    
+        state=false;
+
+    }
+
+
+    if(numbers.test(contact_var))
+    {
 
    
-    if(contact_var=="" || contact_var>9999999999 || contact_var<600000000)
-    {
-        document.getElementById("numberContactError").textContent="The field is empty or wrong number is entered";
-        document.getElementById("numberContact").focus();
-        
-        state=false;
-       
+            if(contact_var=="" || contact_var>9999999999 || contact_var<600000000)
+            {
+                document.getElementById("txtContactError").textContent="The field is empty or wrong number is entered";
+                document.getElementById("txtContact").focus();
+                
+                state=false;
+            
+            }
     }
 
     // Evaluating name input

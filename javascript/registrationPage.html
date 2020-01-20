@@ -21,37 +21,103 @@
 
         <label style="font-size: xx-large ;">CREATE A NEW ACCOUNT:</label></br>
 
-        <label for="name">NAME:</label><br>
-        <input type="text"  id="name" name="name" placeholder=" Abhishek Kumar" ><br>
-        <p id="nameError"></p>
+        <label for="txtFirstName">FIRST NAME:</label><br>
+        <input type="text"  id="txtFirstName" name="name" placeholder=" Enter your First Name" ><br>
+        <p id="firstNameError"></p>
 
-        <label for="contact">CONTACT:</label><br>
-        <input type="number" id="contact" name="contact" placeholder="8XXXXXXXX6"><br>
-        <p id="contactError"></p>
+        
+        <label for="txtMiddleName">MIDDLE NAME:</label><br>
+        <input type="text"  id="txtMiddleName" name="MiddleName" placeholder=" Enter your Middle Name" ><br>
+        <p id="middleNameError"></p>
 
-        <label for="email">E-MAIL:</label><br>
-        <input type="text" id="email" name="email" placeholder="xyz@gmail.com"><br>
-        <p id="emailError"></p>
+        <label for="txtLastName">LAST NAME:</label><br>
+        <input type="text"  id="txtLastName" name="LastName" placeholder=" Enter your Last Name" ><br>
+        <p id="lastNameError"></p>
 
-        <label for="gender">GENDER:</label><br>
-        <select id="gender" style="margin: 2px;">
-            <option value="male" selected>Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
+       
+
+        <label for="numberContact">CONTACT:</label><br>
+        <input type="number" id="numberContact" name="contact" placeholder="8XXXXXXXX6"><br>
+        <p id="numberContactError"></p>
+
+       
+        <label for="numberAlternativeContact">ALTERNATIVE CONTACT:</label><br>
+        <input type="number" id="numberAlternativeContact" name="alternativeContact" placeholder="8XXXXXXXX6"><br>
+        <p id="numberAlternativeContactError"></p>
+
+        
+
+        <label for="txtEmail">E-MAIL:</label><br>
+        <input type="text" id="txtEmail" name="email" placeholder="xyz@gmail.com"><br>
+        <p id="txtEmailError"></p>
+        
+        
+        <label for="idPassword">Enter Password:</label><br>
+        <input type="password" id="idPassword" name="idPassword" placeholder="********"><br>
+        <p id="idPasswordError"></p>
+
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re enter password "><br>
+        <p id="confirmPasswordError"></p>
+
+
+        <label for="radioGender">GENDER:</label><br>
+        <div id="radioGender">
+          <input type="radio" id="radioGenderMale" name="gender" value="male" > Male
+          <input type="radio" id="radioGenderFemale" name="gender" value="female"> Female
+          <input type="radio" id="radioGenderOther"  name="gender" value="other"> Other
+        </div><br>
+        <p id="radioGenderError"></p>
+
+        <label for="dateDob">D.O.B:</label><br>
+        <input type="date" id="dateDob" name="dob"><br>
+        <p id="dateDobError"></p>
+
+        <label for="txtAddress">ADDRESS:</label><br>
+        <input id="txtAddress" type="text" name="txtAddress" placeholder="Address goes here..." ><br>
+        <p id="txtAddressError"></p>
+
+
+        <label for="selectState">State:</label><br>
+        <select id="selectState" style="margin: 2px; padding: 2px;">
+            <option value="">select State</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Kerala">kerala</option>
         </select><br>
+        <p id="selectStateError"></p>
 
-        <label for="dob">D.O.B:</label><br>
-        <input type="date" name="dob"><br>
-        <p id="dateError"></p>
 
-        <label for="address">ADDRESS:</label><br>
-        <input id="address" type="text" name="address" placeholder="Address goes here..." ><br>
-        <p id="addressError"></p>
+        <label for="selectCity">City:</label><br>
+        <select id="selectCity" style="margin: 2px; padding: 2px;">
+          <option value="">select City</option>
+            <option value="Bhubhaneshwar" >Bhubhaneshwar</option>
+            <option value="Jamshedpur">Jamshedpur</option>
+            <option value="Bherampur">Bherampur</option>
+        </select><br>
+        <p id="selectCityError"></p>
 
+       
+
+        <label for="selectCountry">Country:</label><br>
+        <select id="selectCountry" style="margin: 2px; padding: 2px;">
+          <option value="">select Country</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="China">China</option>
+        </select><br>
+        <p id="selectCountryError"></p>
+
+      
         <fieldset style="border: solid; margin-top: 10px; margin-right: 20px; padding: 10px;">
           <legend style="text-align: center; font-size: medium;"> Verify Captcha:</legend>
 
           <p id="displayMessage1"></p>
+          <p id="displayMessage4"></p>
           <p id="displayMessage2"></p>
        
         

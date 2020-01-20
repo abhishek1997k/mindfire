@@ -40,6 +40,10 @@ input[ type=submit ]{
 
 
 }
+input[type = radio]{
+    padding-top: 10px;
+    width: auto;
+}
 #address{
     padding-bottom: 30px;
     padding-top: 10px;

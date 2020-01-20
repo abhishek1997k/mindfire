@@ -63,7 +63,7 @@ function captchaEvaluation()  // function for evaluating the captcha response if
     
     if(actualAnswer == ans ){
         document.getElementById("displayMessage3").textContent="Successfully verified"; 
-        document.getElementById("displayMessage1").textContent=" ";
+        document.getElementById("displayMessage4").textContent=" ";
         document.getElementById("registrationButton").style.display="block";
         var btn = document.createElement("BUTTON");   
         btn.innerHTML = "Register";
@@ -72,7 +72,8 @@ function captchaEvaluation()  // function for evaluating the captcha response if
         return false;
     }
         document.getElementById("displayMessage3").textContent=""; 
-        document.getElementById("displayMessage1").textContent="Incorrect Answer! Please try again!";
+        document.getElementById("displayMessage4").textContent="Incorrect Answer! Please try again!";
+        captchaDriver();
         return false;
 
 }

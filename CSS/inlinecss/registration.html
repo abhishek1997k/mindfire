@@ -17,9 +17,9 @@
         Email:<span style="color: red;">*</span><br>
         <input type="text" name="email"><br>
         Password:<span style="color: red;">*</span><br>
-        <input type="text" name="Password"><br>
+        <input type="password" name="Password"><br>
         Confirm Password:<span style="color: red;">*</span><br>
-        <input type="text" name="Password"><br>
+        <input type="password" name="Password"><br>
         Gender:<span style="color: red;">*</span><br>
         <div>
             <input type="radio" name="gender" value="male" checked> Male<br>
@@ -27,14 +27,14 @@
             <input type="radio" name="gender" value="other"> Other
         </div>
         Phone Number 1<span style="color: red;">*</span>:<br>
-        <input type="text" name="phonenumber"><br>
+        <input type="number" name="phonenumber"><br>
         Phone Number 2:<br>
-        <input type="text" name="phonenumber"><br>
+        <input type="number" name="phonenumber"><br>
         Address 1:<span style="color: red;">*</span><br>
-        <input id="ad" type="textarea" name="caddress" style="width:100% ; padding-bottom: 30px;"><br>
+        <input id="address1" type="text" name="caddress" style="width:100% ; padding-bottom: 30px;"><br>
         <br>
         Address 2:<br>
-        <input id="ad" type="textarea" name="paddress" style="width: 100%; padding-bottom: 30px;"><br>
+        <input id="address2" type="text" name="paddress" style="width: 100%; padding-bottom: 30px;"><br>
         <br>
         City:<span style="color: red;">*</span><br>
         <select>
@@ -54,12 +54,13 @@
             <option>USA</option>
             <option>IRAN</option>
         </select><br>
-        Subscribe news letter:<br>
-        <div>
-            <input type="radio"  value="male" checked> Yes<br>
-            <input type="radio"  value="female"> No<br>
+
+
+       
+        <div style="margin-top: 20px;">
+            <input type="checkbox"  value="yes"> Subscribe news letter<br>
             
-        </div>
+        </div>    
         <br>
           <input type="submit" value="Submit">
 

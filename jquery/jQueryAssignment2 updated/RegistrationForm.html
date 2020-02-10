@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registeration Page
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type = "text/javascript" 
+        src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <link rel="stylesheet" href="style/regPagestyle.css">
+</head>
+
+<body>
+
+    <div>
+        <h1>Employee Details:</h1>
+    </div>
+    <div id="formContainer">
+        <form id="registerationForm">
+            <fieldset id="nameFieldset" >
+                <div id="imageContainer">
+                    <div class="image-upload-wrap">
+                        <input id="imageValid" class="file-upload-input" type='file' accept="image/*" />
+                        <p id="imageError"></p>
+                        <div class="drag-text">
+                          <h3>+ Add Image</h3>
+                        </div>
+                    </div>
+                    <div class="file-upload-content">
+                        <img class="file-upload-image" src="#" alt="your image" />
+                    </div>
+                </div>
+
+                <div id="nameDiv">
+                <div class="name">
+                <label for="txtFirstName">First Name :</label>
+                <input type="text"  id="txtFirstName" placeholder="Enter First Name" name="firstName">
+                <p class="txtFirstNameError"></p>
+                </div>
+
+                <div class="name">
+                <label for="txtMiddleName">Middle Name :</label>
+                <input type="text"  id="txtMiddleName" placeholder="Enter Middle Name" name="middleName" > 
+                <p class="txtMiddleNameError"></p>
+                </div>
+
+                <div class="name">
+                <label for="txtLastName">Last Name :</label>
+                <input type="text"  id="txtLastName" placeholder="Enter Last Name" name="lastName"> 
+                <p class="txtLastNameError"></p>
+                </div>
+
+            </div>
+        </fieldset>
+        <!-- name div closed -->
+        <fieldset id="contactInfoFieldset">
+            <div id="contactInfoDiv">
+                <div>   
+                <label for="txtEmail">Email :</label>
+                <input type="text" id="txtEmail"  class="contactInfo" placeholder="Enter email" name="email" >
+                <p class="txtEmailError"></p>
+                </div> 
+
+                <div >   
+                <label for="txtPan">PAN :</label>
+                <input type="text" id="txtPan" class="contactInfo" placeholder="Enter P.A.N" name="pan">
+                <p class="txtPanError"></p>
+                </div>
+                
+                <div>
+                <label for="txtAdhar">Aadhar number :</label>
+                <input type="text" id="txtAdhar" class="contactInfo" placeholder="Enter Adhar number" name="adhar">
+                <p class="txtAdharError"></p>
+                </div>
+                </div>
+                <!-- div contactInfoDiv closed -->
+            </fieldset>
+            <!-- contact-info Fieldset ends here -->
+
+            <fieldset class="contactNumber">
+                <div class="container">
+                    <label id="lblContact"> Contact Number :</label>
+                <div class="ContactDiv">
+                    <input type="text" class="txtContact" placeholder="Enter Contact" name="contact">
+                    <button id="contactAddButton">+</button>
+                    <p class="txtContactError"></p>
+                </div>
+                
+                </div>
+
+            </fieldset>
+            <!-- contact info -->
+            
+        <fieldset id="fieldAddressBlock">
+            <button id="addressAddButton">+</button>
+        <div id="addressBlock">
+            
+            <div class="addressDivNew" >
+                
+                <label > Address :</label>
+                <div class="addressButton">
+                    <textarea  name="address" class="txtAddressNew" placeholder="Address goes here..." rows=4 cols=75></textarea>
+                    <p class="txtAddressError"><br></p>
+                </div>
+        
+                <div class="addressSelection">
+                    <label for="selectCountry"> Country:</label><br>
+                    <select class="selectCountryNew">
+                    <option value="1">Select Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="China">China</option>
+                    </select><br>
+                    <p class="selectCountryError"></p>
+                    <!-- country col ends here -->
+                    <label> State:</label><br>
+                    <select class="selectStateNew" >
+                        <option value="2">Select State</option>
+                    </select><br>
+                    <p class="selectStateError"></p>
+                </div>
+
+                <div class="addressSelection">
+                    <div class="divCity">
+                        <label>City:</label>
+                        <input type="text" class="txtCity" placeholder="Enter City" name="city">
+                        <p class="txtCityError"></p>
+                    </div>
+                    <div class="divZipcode">
+                        <label> ZIP code :</label>
+                        <input type="text" class="txtZipcode" placeholder="Enter PIN-Code" name="zip">
+                        <p class="txtZipcodeError"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- div address div -->
+        </div>                  
+        </fieldset>  
+        <fieldset  id="captchaField">
+               <legend id="legendCaptcha"> Verify Captcha:</legend>
+               <div style="text-align: center;">
+        
+                    <p id="displayMessage1"></p>
+                    <p id="displayMessage4"></p>
+                    <p id="displayMessage2"></p>
+                
+                <div id="captcha">
+                    <input type="number" Id="captchaResponse" name="response" >
+                    <button class="captchaButton" value="Submit"  id="captchaSubmit">SUBMIT</button>
+                    <input type="button"  value="Refresh" id="captchaRefresh"></input>
+                </div>
+                <div id="displayMessage3"></div>
+                </div>
+        
+            </fieldset>
+        
+            <button id="submitButton">REGISTER</button>
+            <input type="reset" value="Reset" id="resetButton"/>
+    </form>
+        <!-- form closed -->
+    </div>
+    <div id="Info">
+        <div class="file-upload-content">
+            <img class="file-upload-image" src="#" alt="your image" />
+          </div>
+        <fieldset id="nameInfo" class="previewField">
+            <legend> Personal Information:</legend>
+        </fieldset>
+
+        <fieldset id="contactInfo"class="previewField">
+            <legend> Contact Information:</legend>
+        </fieldset>
+    </div>
+    <!-- formContainer -->
+
+    <input type="button" id="myBtn">
+    
+    <script type = "text/javascript" src="script/common.js"></script>
+    <script type = "text/javascript"  src="script/captchaValidation.js"></script>
+</body>
+</html>

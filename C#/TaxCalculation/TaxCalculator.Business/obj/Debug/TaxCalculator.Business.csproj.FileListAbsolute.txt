@@ -1,0 +1,7 @@
+D:\C#\TaxCalculation\TaxCalculator.Business\obj\Debug\TaxCalculator.Business.csprojResolveAssemblyReference.cache
+D:\C#\TaxCalculation\TaxCalculator.Business\bin\Debug\TaxCalculator.Business.dll
+D:\C#\TaxCalculation\TaxCalculator.Business\bin\Debug\TaxCalculator.Business.pdb
+D:\C#\TaxCalculation\TaxCalculator.Business\bin\Debug\TaxCalculator.Infra.dll
+D:\C#\TaxCalculation\TaxCalculator.Business\bin\Debug\TaxCalculator.Infra.pdb
+D:\C#\TaxCalculation\TaxCalculator.Business\obj\Debug\TaxCalculator.Business.dll
+D:\C#\TaxCalculation\TaxCalculator.Business\obj\Debug\TaxCalculator.Business.pdb

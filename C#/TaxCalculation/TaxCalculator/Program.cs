@@ -24,22 +24,32 @@ namespace TaxCalculator
             {
                 
                 isParsable = Double.TryParse(Console.ReadLine(), out income);//income input
-                if (!isParsable)
+                try
                 {
+                    if (!isParsable)
+                    {
+                        throw (new InvalidInputException("Incorrect format of Input"));
+                    }
+                    if (income < 0)
+                    {
+                        throw (new NegativeInputException("Negative Input"));
+                    }
+                }
+                catch(InvalidInputException e) {
                     Console.ForegroundColor = ConsoleColor.Red ;
-                    Console.WriteLine("Please Enter the input in correct Numeric Format.");
+                    Console.WriteLine("Invalid input exception error: {0}", e.Message);
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("Enter Again: ");
                 }
-                if (income < 0)
+                catch (NegativeInputException e)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Input cannot be Negative.");
+                    Console.WriteLine("Invalid input exception error: {0}", e.Message);
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("Enter Again: ");
                     isParsable = false;
-
                 }
+                
             }
             ob.GrossIncome = income;
 
@@ -62,28 +72,50 @@ namespace TaxCalculator
             {
 
                 isParsable = Double.TryParse(Console.ReadLine(), out deduction);// deduction value input
-                if (!isParsable)
+                try
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Please Enter the input in correct Numeric Format.");
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.WriteLine("Enter Again: ");
+                        if (!isParsable)
+                        {
+                            throw (new InvalidInputException("Incorrect format of Input"));
+                        }
+                        if (deduction < 0)
+                        {
+                            throw (new NegativeInputException("Negative Input"));
+                        }
+                        if (deduction > income)
+                        {
+                            throw (new DeductionLargerthanIncomeException(" Deduction value is greater than Income"));
+                        }
                 }
-                if (deduction > income && deduction<0)
+                catch (InvalidInputException e)
+                 {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid input exception error: {0}", e.Message);
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Enter Again: ");
+                 }
+                catch (NegativeInputException e)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Deduction amount cannot be greater than Salary or a negative value");
+                    Console.WriteLine("Invalid input exception error: {0}", e.Message);
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine("Enter Again: ");
                     isParsable = false;
-
                 }
-                
+                catch (DeductionLargerthanIncomeException e)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input exception error: {0}", e.Message);
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine("Enter Again: ");
+                    isParsable = false;
+                }
             }
             ob.Deduction = deduction; // object creation
             double taxableIncomeResult=ob.TaxableIncome();// taxable income calculation
             double[] resultSlab= new double[3];
             Double taxResult=ob.TaxPayable(out resultSlab); // tax total calculation
+
             Console.Clear();
             // Result Display code
             Console.WriteLine("Tax Calculation Result: \n");
